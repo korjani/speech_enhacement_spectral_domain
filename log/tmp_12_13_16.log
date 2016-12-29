@@ -1,0 +1,180 @@
+Using TensorFlow backend.
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:03.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x49080d0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:04.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x490ba50
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:05.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x490f3d0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 3 with properties: 
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:06.0
+Total memory: 3.94GiB
+Free memory: 3.91GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 3
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 3 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 3 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y N N N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   N Y N N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 3:   N N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GRID K520, pci bus id: 0000:00:03.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GRID K520, pci bus id: 0000:00:04.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: GRID K520, pci bus id: 0000:00:05.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:3) -> (device: 3, name: GRID K520, pci bus id: 0000:00:06.0)
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+dense_1 (Dense)                  (None, 2800)          7842800     dense_input_1[0][0]              
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 2800)          0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+batchnormalization_1 (BatchNormal(None, 2800)          5600        activation_1[0][0]               
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 2800)          0           batchnormalization_1[0][0]       
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 2800)          7842800     dropout_1[0][0]                  
+____________________________________________________________________________________________________
+activation_2 (Activation)        (None, 2800)          0           dense_2[0][0]                    
+____________________________________________________________________________________________________
+batchnormalization_2 (BatchNormal(None, 2800)          5600        activation_2[0][0]               
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 2800)          0           batchnormalization_2[0][0]       
+____________________________________________________________________________________________________
+dense_3 (Dense)                  (None, 2800)          7842800     dropout_2[0][0]                  
+____________________________________________________________________________________________________
+activation_3 (Activation)        (None, 2800)          0           dense_3[0][0]                    
+____________________________________________________________________________________________________
+batchnormalization_3 (BatchNormal(None, 2800)          5600        activation_3[0][0]               
+____________________________________________________________________________________________________
+dense_4 (Dense)                  (None, 607)           1700207     batchnormalization_3[0][0]       
+____________________________________________________________________________________________________
+activation_4 (Activation)        (None, 607)           0           dense_4[0][0]                    
+====================================================================================================
+Total params: 25245407
+____________________________________________________________________________________________________
+file exists: /home/mehdi/data/corpus/VCTK-Corpus/wav48/*/*.wav
+file is readable: /home/mehdi/data/corpus/VCTK-Corpus/wav48/*/*.wav
+Training model...
+Epoch 1/100000
+W tensorflow/core/framework/op_kernel.cc:975] Failed precondition: Attempting to use uninitialized value batchnormalization_1_running_mean/biased
+	 [[Node: batchnormalization_1_running_mean/biased/read = Identity[T=DT_FLOAT, _class=["loc:@batchnormalization_1_running_mean"], _device="/job:localhost/replica:0/task:0/gpu:0"](batchnormalization_1_running_mean/biased)]]
+Traceback (most recent call last):
+  File "train.py", line 206, in <module>
+    main()  
+  File "train.py", line 201, in main
+    verbose = 1)
+  File "/usr/local/lib/python2.7/dist-packages/keras/models.py", line 882, in fit_generator
+    pickle_safe=pickle_safe)
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/training.py", line 1461, in fit_generator
+    class_weight=class_weight)
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/training.py", line 1239, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py", line 1040, in __call__
+    updated = session.run(self.outputs + [self.updates_op], feed_dict=feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 766, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 964, in _run
+    feed_dict_string, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1014, in _do_run
+    target_list, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1034, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized value batchnormalization_1_running_mean/biased
+	 [[Node: batchnormalization_1_running_mean/biased/read = Identity[T=DT_FLOAT, _class=["loc:@batchnormalization_1_running_mean"], _device="/job:localhost/replica:0/task:0/gpu:0"](batchnormalization_1_running_mean/biased)]]
+
+Caused by op u'batchnormalization_1_running_mean/biased/read', defined at:
+  File "train.py", line 206, in <module>
+    main()
+  File "train.py", line 169, in main
+    model = generate_model.generate()
+  File "/home/mehdi/code/python/stable/speech_enhanement/spec_domain/generate_model.py", line 21, in generate
+    model.add(BatchNormalization())
+  File "/usr/local/lib/python2.7/dist-packages/keras/models.py", line 312, in add
+    output_tensor = layer(self.outputs[0])
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/topology.py", line 514, in __call__
+    self.add_inbound_node(inbound_layers, node_indices, tensor_indices)
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/topology.py", line 572, in add_inbound_node
+    Node.create_node(self, inbound_layers, node_indices, tensor_indices)
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/topology.py", line 149, in create_node
+    output_tensors = to_list(outbound_layer.call(input_tensors[0], mask=input_masks[0]))
+  File "/usr/local/lib/python2.7/dist-packages/keras/layers/normalization.py", line 140, in call
+    self.updates = [K.moving_average_update(self.running_mean, mean, self.momentum),
+  File "/usr/local/lib/python2.7/dist-packages/keras/backend/tensorflow_backend.py", line 329, in moving_average_update
+    variable, value, momentum)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/moving_averages.py", line 70, in assign_moving_average
+    update_delta = _zero_debias(variable, value, decay)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/training/moving_averages.py", line 177, in _zero_debias
+    trainable=False)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 1024, in get_variable
+    custom_getter=custom_getter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 850, in get_variable
+    custom_getter=custom_getter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 346, in get_variable
+    validate_shape=validate_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 331, in _true_getter
+    caching_device=caching_device, validate_shape=validate_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 677, in _get_single_variable
+    expected_shape=shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variables.py", line 224, in __init__
+    expected_shape=expected_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variables.py", line 370, in _init_from_args
+    self._snapshot = array_ops.identity(self._variable, name="read")
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/gen_array_ops.py", line 1424, in identity
+    result = _op_def_lib.apply_op("Identity", input=input, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py", line 759, in apply_op
+    op_def=op_def)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 2240, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 1128, in __init__
+    self._traceback = _extract_stack()
+
+FailedPreconditionError (see above for traceback): Attempting to use uninitialized value batchnormalization_1_running_mean/biased
+	 [[Node: batchnormalization_1_running_mean/biased/read = Identity[T=DT_FLOAT, _class=["loc:@batchnormalization_1_running_mean"], _device="/job:localhost/replica:0/task:0/gpu:0"](batchnormalization_1_running_mean/biased)]]
+
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 801, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 754, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/keras/engine/training.py", line 433, in data_generator_task
+    generator_output = next(generator)
+  File "train.py", line 133, in data_genertor
+    X_train = np.array([np.hstack(features_noisy[L + 1 - no_frames/2: L +2 +no_frames/2 , :]) for L in range(no_frames/2 -1, len(features_noisy)-no_frames/2-1) ])
+AttributeError: 'NoneType' object has no attribute 'hstack'
+
